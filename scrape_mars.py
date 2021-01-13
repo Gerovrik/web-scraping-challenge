@@ -72,7 +72,7 @@ def scrape():
     # In[133]:
 
 
-    space_image_featured = soup_space_image.find('article', class_="carousel_item")['style'].replace('background-image: url(','').replace(');', '')[1:-1]
+    space_image_featured = soup_space_image.find('article')['style'].replace('background-image: url(','').replace(');', '')[1:-1]
     main_webpage_url = "https://www.jpl.nasa.gov"
     featured_image  = main_webpage_url + space_image_featured
 
