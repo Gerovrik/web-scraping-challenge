@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<!-- #--------------------------Visual divider--------------------------------------# -->
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mars scrape</title>
+
+  <!-- Bring in our bootstrap stylesheet -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+
+
+</head>
+
+<!-- #--------------------------Visual divider--------------------------------------# -->
+<!-- #nav bar template pulled from bootswatch# -->
+<body>
+  <div class="container-fluid">
+      <h1>Mission to Mars</h1>
+      <br>
+      <a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape Data</a>
+  </div>
+  <!--mars news-->
+  <div class= 'col-sm-12'>
+      <h2 class="headline" >{{data.Title_scrape}}</h2>
+      <p >{{data.Paragraph_scrape}}</p>
+  </div>
+
+
+  <!--mars image-->
+  <div class= 'col-sm-12'>
+      <h3>Featured mars image</h3>
+      <a>
+      <img src="{{data.featured_image}}" alt = "Featured mars image">
+      </a>
+  </div>
+  <!--mars facts-->  
+  <div class= "col-md-4">
+      <div class="container">
+        <h4>Mars Facts</h4>
+        <p>
+              {{data.images_list | safe}}
+        </p>
+      </div>
+  </div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+<!-- #--------------------------Visual divider--------------------------------------# -->
+
+</html>
